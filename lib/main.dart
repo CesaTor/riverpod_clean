@@ -9,11 +9,13 @@ void main() {
 
   runApp(
     ProviderScope(
-      child: MaterialApp.router(
-        routerConfig: AppRouter().config(),
-        theme: AppTheme(AppText.theme).theme(Brightness.light),
-        darkTheme: AppTheme(AppText.theme).theme(Brightness.dark),
-        themeMode: ThemeMode.system,
+      child: Consumer(
+        builder: (context, ref, child) => MaterialApp.router(
+          routerConfig: AppRouter(ref).config(),
+          theme: AppTheme(AppText.theme).theme(Brightness.light),
+          darkTheme: AppTheme(AppText.theme).theme(Brightness.dark),
+          themeMode: ThemeMode.system,
+        ),
       ),
     ),
   );

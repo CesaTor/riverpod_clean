@@ -4,7 +4,7 @@ Riverpod minimum boilerplate app
 
 Features:
 - [x] type-safe routing
-- [ ] organized theming
+- [x] organized theming
 - [ ] authentication
 - [ ] internet checking
 - [ ] logging

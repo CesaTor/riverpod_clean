@@ -7,8 +7,8 @@ Features:
 - [x] organized theming
 - [x] internet checking
 - [x] authentication
+- [x] local storage
 - [ ] logging
-- [ ] local storage
 - [ ] error handling
 - [ ] 100% coverage
 

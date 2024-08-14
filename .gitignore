@@ -45,3 +45,4 @@ app.*.map.json
 # Freezed
 *.freezed.dart
 *.g.dart
+.vscode/launch.json

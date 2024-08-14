@@ -25,6 +25,6 @@ class Authentication extends _$Authentication {
   void logout() => state = null;
 }
 
-extension InternetConnectionExt on WidgetRef {
+extension AuthContextExt on WidgetRef {
   Jwt? get jwt => watch(authenticationProvider)?.jwt;
 }

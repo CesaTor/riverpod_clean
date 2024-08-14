@@ -8,7 +8,7 @@ Features:
 - [x] internet checking
 - [x] authentication
 - [x] local storage
-- [ ] logging
+- [x] logging
 - [ ] error handling
 - [ ] 100% coverage
 

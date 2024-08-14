@@ -10,7 +10,7 @@ class Authentication extends _$Authentication {
   User? build() => null;
 
   Future<bool> login() async {
-    await Future.delayed(const Duration(seconds: 1));
+    await Future.delayed(const Duration(milliseconds: 300));
 
     state = const User(
       email: "email@email.com",

@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_clean/core/auth/guard.dart';
+import 'package:riverpod_clean/core/auth/auth_guard.dart';
 import 'package:riverpod_clean/core/router/app_router.gr.dart';
 
 @AutoRouterConfig(replaceInRouteName: 'Screen|Page,Route')

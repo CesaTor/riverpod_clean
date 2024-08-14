@@ -9,7 +9,7 @@ class AuthGuard extends AutoRouteGuard {
   AuthGuard(this._ref);
   @override
   void onNavigation(NavigationResolver resolver, StackRouter router) async {
-    final token = _ref.watch(authenticationProvider);
+    final token = _ref.watch(authenticationProvider)?.jwt;
 
     switch (token) {
       case null:

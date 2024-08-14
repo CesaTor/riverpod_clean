@@ -7,19 +7,24 @@ part 'authentication_provider.g.dart';
 @Riverpod(keepAlive: true)
 class Authentication extends _$Authentication {
   @override
-  Jwt? build() => null;
+  User? build() => null;
 
   Future<bool> login() async {
-    state = const Jwt(token: "aaaa");
-    await Future.delayed(const Duration(seconds: 300));
+    await Future.delayed(const Duration(seconds: 1));
+
+    state = const User(
+      email: "email@email.com",
+      id: "1",
+      jwt: Jwt(token: "jwt"),
+      name: "Name",
+    );
+
     return true;
   }
 
-  void logout() {
-    state = null;
-  }
+  void logout() => state = null;
 }
 
 extension InternetConnectionExt on WidgetRef {
-  Jwt? get jwt => watch(authenticationProvider);
+  Jwt? get jwt => watch(authenticationProvider)?.jwt;
 }

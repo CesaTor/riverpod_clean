@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_clean/core/router/app_router.dart';
@@ -28,7 +29,9 @@ Future<void> _preRunConfig(Future<void> Function() runApp) async {
   );
 
   FlutterError.onError = (details) {
-    Sentry.captureException(details.exception, stackTrace: details.stack);
+    if (!kDebugMode) {
+      Sentry.captureException(details.exception, stackTrace: details.stack);
+    }
   };
 }
 

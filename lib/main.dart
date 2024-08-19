@@ -18,7 +18,7 @@ void main() async {
 
 Widget _app(WidgetRef ref) => MaterialApp.router(
       routerConfig: AppRouter(ref).config(),
-      theme: AppTheme(AppText.theme).theme(Brightness.light),
-      darkTheme: AppTheme(AppText.theme).theme(Brightness.dark),
+      theme: AppTheme(theme).theme(Brightness.light),
+      darkTheme: AppTheme(theme).theme(Brightness.dark),
       themeMode: ThemeMode.system,
     );
